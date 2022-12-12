@@ -1,4 +1,4 @@
-#Sistema Inventario
+# Sistema Inventario
 
 David Camilo Franco Rodriguez - 20171020090
 
