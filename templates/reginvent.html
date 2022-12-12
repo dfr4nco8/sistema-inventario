@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Reginvent</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link href="{{url_for('static', filename='css/main.css')}}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<!-- SideBar -->
+	<section class="full-box cover dashboard-sideBar">
+		<div class="full-box dashboard-sideBar-bg btn-menu-dashboard"></div>
+		<div class="full-box dashboard-sideBar-ct">
+			<!--SideBar Title -->
+			<div class="full-box text-uppercase text-center text-titles dashboard-sideBar-title">
+				Inventario <i class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
+			</div>
+			<!-- SideBar User info -->
+			<div class="full-box dashboard-sideBar-UserInfo">
+				<figure class="full-box">
+					<img src="{{url_for('static',filename='images/avatar.jpg')}}" alt="UserIcon">
+					<figcaption class="text-center text-titles">Juliana Nail Spa</figcaption>
+				</figure>
+				<ul class="full-box list-unstyled text-center">
+					<li>
+						<a href="/" class="btn-exit-system">
+							<i class="zmdi zmdi-power"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+			</ul>
+		</div>
+	</section>
+
+	<!-- Content page-->
+	
+	<section class="full-box dashboard-contentPage">
+		<!-- NavBar -->
+		<nav class="navbar navbar-expand-lg bg-light">
+			<div class="container-fluid">
+			  <a class="navbar-brand" href="/home">Inicio</a>
+			  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+				<ul class="navbar-nav">
+				  <li class="nav-item">
+					<a class="navbar-brand" href="{{ url_for('prov') }}">Proveedores...</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="navbar-brand" href="{{ url_for('clien') }}">Clientes...</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="navbar-brand" href="{{ url_for('vent') }}">Ventas...</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="navbar-brand" href="{{ url_for('prod') }}">Productos...</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="navbar-brand" href="{{ url_for('invent') }}">Inventario...</a>
+				  </li>
+				</ul>
+			  </div>
+			</div>
+		  </nav>
+		  <ul class="nav nav-pills nav-fill">
+			<li class="nav-item">
+			  <a class="nav-link" href="{{ url_for('invent') }}">Nueva Entrada</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="{{ url_for('reginvent') }}">Registro Inventario</a>
+			</li>
+		  </ul>
+	<!-- Content page --><div id="myTabContent" class="tab-content">
+			<div class="tab-pane fade active in" id="new">					
+				<div class="table-responsive">
+					<table class="table table-hover text-center">
+						<thead>
+							<tr>
+								<th class="text-center">Id Producto</th>
+								<th class="text-center">Nombre</th>
+								<th class="text-center">Precio Compra</th>
+								<th class="text-center">Cantidad Compra</th>
+								<th class="text-center">Precio Venta</th>
+								<th class="text-center">Consecutivo Venta</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Carlos</td>
+								<td>Alfaro</td>
+								<td>El Salvador</td>
+								<td>carlos@gmail.com</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			  </div>
+		</div>
+	<!--====== Scripts -->
+	<script src="./js/jquery-3.1.1.min.js"></script>
+	<script src="./js/sweetalert2.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/material.min.js"></script>
+	<script src="./js/ripples.min.js"></script>
+	<script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="./js/main.js"></script>
+	<script>
+		$.material.init();
+	</script>
+</body>
+</html>
