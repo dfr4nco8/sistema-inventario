@@ -164,7 +164,7 @@ def clien():
 def iniciolog():
     return render_template('home.html')
 
-@app.route('/agreclien', methods = ['POST','ET'])
+@app.route('/agreclien', methods = ['POST','GET'])
 def agreclien():
     if request.method == 'POST':
         id_cliente = request.form['id_cliente']
